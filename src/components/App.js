@@ -4,12 +4,12 @@ import fBase, { authService } from "../fBase"
 import { getAuth } from "@firebase/auth";
 
 function App() {
-  console.log(authService.currentUser);
+  // console.log(authService.currentUser);
   const [init, setInit] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(()=>{
     authService.onAuthStateChanged((user) => {
-      console.log(user);
+      // console.log(user);
       if(user){
         setIsLoggedIn(true);
       }else{
